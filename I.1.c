@@ -16,7 +16,7 @@ int main()
 }
 char *strcpy_pointer( char *dest, char *src )
 {
-    while(*src)
+    while(*src != '\0')
     {
         *dest = *src;
         dest++;
@@ -29,10 +29,10 @@ char *strcpy_array( char dest[], char src[] )
 {
     int i;
 
-    for(i=0;i<=strlen(src);i++)
+    for(i=0; i <= strlen(src) ;i++)
     {
-        dest[i]=src[i];
+        dest[i] = src[i];
     }
-
+    dest='\0';
     return src;
 }
